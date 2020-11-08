@@ -102,8 +102,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-3 w3_footer_grid">
 					<h3>Category</h3>
-					<ul class="info"> 
-						<li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="categories.html">Product Categories</a></li>
+					<ul class="info">
+						{% for i in categories %} 
+						<li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="/category/{{ i.slug }}">{{ i.category_name }}</a></li>
+						{% endfor %}
 					</ul>
 				</div>
 				
@@ -129,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 				<div class="payment-w3ls">	
-					<img src="{% static 'images/card.png' %}" alt=" " class="img-responsive">
+					<!-- <img src="{% static 'images/card.png' %}" alt=" " class="img-responsive"> -->
 				</div>
 				<div class="clearfix"> </div>
 			</div>
